@@ -1,0 +1,33 @@
+{
+  "name": "learn-tdd-by-example",
+  "version": "1.0.0",
+  "description": "learn tdd by examples",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint src --fix",
+    "test": "npm jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/eslint": "^7.28.0",
+    "@typescript-eslint/eslint-plugin": "^4.31.2",
+    "@typescript-eslint/parser": "^4.31.2",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husk": "^0.5.3",
+    "husky": "^7.0.2",
+    "typescript": "^4.4.3"
+  },
+  "dependencies": {
+    "g": "^2.0.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  }
+}
