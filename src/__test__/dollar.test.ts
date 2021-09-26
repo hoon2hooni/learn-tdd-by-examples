@@ -7,7 +7,16 @@ import Dollar from "./dollar";
  * Dollar 부작용?
  * Money 반올림?
  */
+
 it("$5 X 2 = $10", () => {
-  const dollar = new Dollar(5, 2);
-  expect(dollar.times).toBe(10);
+  const Five = new Dollar(5);
+  const Product = Five.times(2);
+  expect(Product.amount).toBe(10);
+});
+
+it("Dollar 부작용?", () => {
+  const Five = new Dollar(5);
+  let Product = Five.times(2);
+  Product = Five.times(3);
+  expect(Product.amount).toBe(15);
 });

@@ -1,12 +1,13 @@
 class Dollar {
-  private amount: number;
-  private multiplier: number;
-  constructor(amount: number, multiplier: number) {
-    this.amount = amount;
-    this.multiplier = multiplier;
+  private _amount: number;
+  constructor(amount: number) {
+    this._amount = amount;
   }
-  public get times() {
-    return this.amount * this.multiplier;
+  times(multiplier: number) {
+    return new Dollar(this.amount * multiplier);
+  }
+  public get amount() {
+    return this._amount;
   }
 }
 export default Dollar;
