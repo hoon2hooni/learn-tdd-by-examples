@@ -1,4 +1,5 @@
 import Dollar from "./dollar";
+import Franc from "./franc";
 
 /**
  * $5+ lOCHF = $10(환율이 2:1일 경우)
@@ -7,6 +8,7 @@ import Dollar from "./dollar";
  * Dollar 부작용? --clear
  * Money 반올림?
  * equals () --clear
+ * 5CHF x 2 = 10CHF
  */
 
 /**
@@ -24,4 +26,17 @@ it("test Multiplication", () => {
   const five = new Dollar(5);
   expect(new Dollar(10)).toEqual(five.times(2));
   expect(new Dollar(15)).toEqual(five.times(3));
+});
+
+it("test Fran Multiplication", () => {
+  const five = new Franc(5);
+  expect(new Franc(10)).toEqual(five.times(2));
+  expect(new Franc(15)).toEqual(five.times(3));
+});
+
+it("test 5CHF x 2 = 10CHF", () => {
+  const ten = new Franc(10);
+  const five = new Franc(5);
+  expect(ten.equals(five.times(2))).toBe(true);
+  expect(ten.equals(five.times(3))).toBe(false);
 });
