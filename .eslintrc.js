@@ -5,4 +5,13 @@ module.exports = {
     "plugin:prettier/recommended",
     "plugin:@typescript-eslint/recommended",
   ],
+  overrides: [
+    {
+      // enable the rule specifically for TypeScript files
+      files: ["*.ts", "*.test.tsx"],
+      rules: {
+        "@typescript-eslint/explicit-module-boundary-types": ["off"],
+      },
+    },
+  ],
 };
