@@ -1,15 +1,15 @@
 async function helloWorld() {
-  return 'hello'
+  return "hello";
 }
 
 async function byeWorld(params: string) {
-  return `${params} bye world`
+  return `${params} bye world`;
 }
 
 async function wholeWorld() {
   const hello = await helloWorld();
   const bye = await byeWorld(hello);
-  return bye
+  return bye;
 }
 
-wholeWorld().then((res)=> console.log(res));
+wholeWorld().then((res) => console.log(res));
