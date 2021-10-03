@@ -1,3 +1,4 @@
+import Money from "./money";
 import Dollar from "./dollar";
 import Franc from "./franc";
 
@@ -23,15 +24,15 @@ it("test equality", () => {
 });
 
 it("test Multiplication", () => {
-  const five = new Dollar(5);
-  expect(new Dollar(10)).toEqual(five.times(2));
-  expect(new Dollar(15)).toEqual(five.times(3));
+  const five = Money.dollar(5);
+  expect(Money.dollar(10)).toEqual(five.times(2));
+  expect(Money.dollar(15)).toEqual(five.times(3));
 });
 
 it("test Fran Multiplication", () => {
-  const five = new Franc(5);
-  expect(new Franc(10)).toEqual(five.times(2));
-  expect(new Franc(15)).toEqual(five.times(3));
+  const five = Money.franc(5);
+  expect(Money.franc(10)).toEqual(five.times(2));
+  expect(Money.franc(15)).toEqual(five.times(3));
 });
 
 it("test 5CHF x 2 = 10CHF", () => {
